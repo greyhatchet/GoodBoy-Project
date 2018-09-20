@@ -1,4 +1,17 @@
-<img id="blah" alt="your image" width="1000" height="1000" />
-
-<input type="file" 
-    onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+<!DOCTYPE html>
+<html>
+<title>Photo Uploader</title>
+<head>
+    <link rel = "stylesheet" title = "basic style" type = "text/css"
+    href = "./public.css" media = "all" />
+</head>
+<body>  
+    <img id="blah" alt="your image" width="1000" />
+    <input style="margin: 5px;" type="file" 
+        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" style="text-align:center;">
+    <footer>
+    <button onclick="location.href = './website.html'">Back</button> 
+    <button onclick="location.href = './website_outline.html'">Sign Out</button>
+    </footer
+</body>  
+</html>

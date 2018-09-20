@@ -1,0 +1,25 @@
+
+/*
+    File: public.css
+
+    Authors: 
+
+    Date created: 20 Sept 2018
+
+    Date modified: 20 Sept 2018
+*/
+
+* {
+    text-align: center;
+}
+
+html {
+    margin: 10px;
+    border: none;
+    padding: 10px;
+}
+body {
+    margin: 10px;
+    padding: 2px;
+}
+

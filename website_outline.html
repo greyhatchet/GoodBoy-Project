@@ -1,39 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <style>
-    * {
-        text-align: center;
-    }
-    </style>
+    <link rel = "stylesheet" title = "basic style" type = "text/css"
+    href = "./public.css" media = "all" />
     <title>Good Bois</title>
     </head>
     <body>
         <p><h2>Welcome to Good Bois!</h2></p>
-        <a href="./GoodBois_Login.html">Login</a> 
+        <button onclick="location.href = './GoodBois_Login.html'" id="login">Login</button>
         <img />
         
-        <p>Have a scrolling list of images here.</p>
+        <p>One image at a time, click next/previous</p>
         <div class="pic-container">
-                <a href="writeA.html"><img src="images/A.png" /></a>
-                <a href="writeB.html"><img src="images/B.png" /></a>
-                <a href="writeC.html"><img src="images/C.png" /></a>
-                <a href="writeD.html"><img src="images/D.png" /></a>
-                <a href="writeE.html"><img src="images/E.png" /></a>
-                <a href="writeA.html"><img src="images/A.png" /></a>
-                <a href="writeB.html"><img src="images/B.png" /></a>
-                <a href="writeC.html"><img src="images/C.png" /></a>
-                <a href="writeD.html"><img src="images/D.png" /></a>
-                <a href="writeE.html"><img src="images/E.png" /></a>
-                <a href="writeA.html"><img src="images/A.png" /></a>
-                <a href="writeB.html"><img src="images/B.png" /></a>
-                <a href="writeC.html"><img src="images/C.png" /></a>
-                <a href="writeD.html"><img src="images/D.png" /></a>
-                <a href="writeE.html"><img src="images/E.png" /></a>
+                <img src="images/A.png" style="width:80%"/>
         </div>
         <p>At bottom of page, page numbers and next page button.</p>
-        <footer><a href="#" class="previous round">&#8249;</a>
-        <a href="#" class="next round">&#8250;</a></footer>
+        <footer>
+            <a href="#" class="previous round">&#10094; Prev</a>
+            <a href="#" class="next round">Next &#10095;</a>
+        </footer>
         
     </body>
 </html>

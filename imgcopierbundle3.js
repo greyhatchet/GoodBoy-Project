@@ -6787,10 +6787,12 @@ function copyFile(file_name) {
     
     //gets file name and adds it to dir2
     //var f = path.basename(file);
-    var file_path = path.normalize('./' + file_name);
-    var source = fs.createReadStream(file_path);
+    var file_path = path.normalize(file_name);
+    console.log(file_path)
+    var source = fs.createReadStream('./' + file_path);
     var all_dest = fs.createWriteStream(path.normalize(all_img_dir + file_name));
     var guest_dest = fs.createWriteStream(path.normalize(guest_img_dir + file_name));
+
 
     source.pipe(all_dest);
     source.pipe(guest_dest);

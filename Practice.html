@@ -1,0 +1,114 @@
+<!--
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Objects</h2>
+
+<p>An object method is a function definition, stored as a property value.</p>
+-->
+
+
+<!--
+<script src = "scripts/main.js">
+//// Create an object:
+//function database_check(user){
+//    return (!user_array.includes(user))
+//}    
+//    
+//var user_array = [];
+//    
+//var user_pass_data = {
+//    username: "Guest",
+//    password: "password",
+//    member_level: 0,
+//    
+//    create_account: function(user, password){
+//        if(database_check(user)){
+//            this.username = user;
+//            this.password = password;
+//            this.member_level = 1;
+//            user_array.push(this.username)
+//            
+//            return ("User " + this.username + "'s account successfully created")
+//        }
+//        return("Username already in use. Select a unique one")
+//    },
+//    
+//    change_password : function(user,oldpass,newpass) {
+//        if(this.username == user && this.password == oldpass){
+//           this.password = newpass;
+//            return (this.username + " has successfully changed password to " + " \"" + this.password + '"')}
+//       return
+//    }
+//};
+//// Display data from the object:
+//document.getElementById("demo").innerHTML = user_pass_data.create_account("Tyson","pw");
+//document.write(user_array)
+</script>
+</body>
+</html>
+-->
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+        * {
+            text-align: center;
+        }
+        </style>
+        <meta charset="UTF-8">
+        <title>Good Bois</title>
+        <h1>Good Bois</h1>
+    </head>
+    <body>
+        <p>This is where you'll see good bois</p>
+        <h2>Login</h2>
+            <form action="./website_outline.html" method="post">
+                <label for="username">Username:</label><br>
+                <input type="text" name="username"><br>
+                <label for="password">Password:</label><br>
+                <input type="text" name="password"><br>
+                <input type="submit" value="Login" formaction="./website.html">
+                <input type="submit" value="Create Account">
+            </form><br/>
+            <script src = "scripts/main.js">
+        </script>
+        
+        <script>
+            var http = new XMLHttpRequest();
+            var url = 'getData.php';
+            var params = 'orem=ipsum&name=binny';
+            http.open('POST', url, true);
+
+            //Send the proper header information along with the request
+            http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+            http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+            alert(http.responseText);
+        }
+            }
+            http.send(params);
+            
+//        const xhr = new XMLHttpRequest();
+//        xhr.open('POST','text.txt',true);
+//        
+//            xhr.setRequestHeader('Content-type','application/x-wwform-urlencoded')
+//            xhr.onreadystatechange = function (){
+//                if (xhr.readyState ==4){
+//                    if (xhr.status == 200){
+//                        console.log(xhr.responseText);
+//                    }
+//        
+//                if (xhr.status == 404) {
+//                    console.log('File or resource not found');
+//                    }
+//                }
+//};
+//
+//xhr.send('Holla');
+        </script>
+           
+    </body>
+</html> 

@@ -9,43 +9,28 @@
     <h1>Guest Page</h1>
 </head>
 <body>
-    <img src="rabbit.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
-    <input type="button" value="Previous" id="prevImg" onclick="changeImage()">
-    <input type="button" value="Next" id="nextImg" onclick="changeImage()">
-    <p>Click image to see more good bois!</p>
+    
+    <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
+    <input type="button" value="Previous" id="prevImg">
+    <input type="button" value="Next" id="nextImg">
+    <p>Click to see more good bois!</p>
     <script>
-        var counter = 1;
+        var counter = 0
+        var imgList = [] //list of images
 
-        nextImg.onclick = function(){
-            if(counter == 0){
-                document.getElementById("imgClickAndChange").src = "rabbit.jpg";
-                counter++;
-            }
-            else if(counter == 1){
-                document.getElementById("imgClickAndChange").src = "lyla.jpg";
-                counter++;
-            }
-            else if(counter == 2){
-                document.getElementById("imgClickAndChange").src = "DeepFriedLyla.jpg";
+        document.getElementById('nextImg').onclick = function(){
+            counter++;
+            if(counter > imgList.length-1){
                 counter = 0;
             }
-        };
-        
-        prevImg.onclick = function(){
-            if(counter == 0){
-                document.getElementById("imgClickAndChange").src = "rabbit.jpg";
-                counter = 2;
+            document.getElementById("imgClickAndChange").src = imgList[counter];
+        }
+        document.getElementById('prevImg').onclick = function() {
+            counter--;
+            if(counter < 0){
+                counter = imgList.length-1;
             }
-            else if(counter == 1){
-                document.getElementById("imgClickAndChange").src = "lyla.jpg";
-                counter--;
-            }
-            else if(counter == 2){
-                document.getElementById("imgClickAndChange").src = "DeepFriedLyla.jpg";
-                counter--;
-            }
-        };
-        
-    </script>
+            document.getElementById("imgClickAndChange").src = imgList[counter];
+        }
 </body>
 </html>

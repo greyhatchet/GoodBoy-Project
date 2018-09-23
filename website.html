@@ -9,7 +9,7 @@
     </head>
     <body>
         <button onclick="location.href = './ImageUploader.html';" id="picbutton">Upload Photo</button>
-        <button onclick="location.href = './website_outline.html'">Sign Out</button>
+        <button onclick="location.href = 'GoodBois_Login.html'">Sign Out</button>
             
         <p>Click next to see more good bois!</p>
         <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
@@ -17,38 +17,23 @@
         <input type="button" value="Next" id="nextImg" onclick="changeImage()">
         
         <script>
-            var counter = 1;
+        var counter = 0
+        var imgList = [] //list of images
 
-            nextImg.onclick = function(){
-                if(counter == 0){
-                    document.getElementById("imgClickAndChange").src = "photos/bib_pom.jpg";
-                    counter++;
-                }
-                else if(counter == 1){
-                    document.getElementById("imgClickAndChange").src = "photos/chihuahua_jacket.jpg";
-                    counter++;
-                }
-                else if(counter == 2){
-                    document.getElementById("imgClickAndChange").src = "photos/professional_shiba.jpg";
-                    counter = 0;
-                }
-            };
-            
-            prevImg.onclick = function(){
-                if(counter == 0){
-                    document.getElementById("imgClickAndChange").src = "photos/bib_pom.jpg";
-                    counter = 2;
-                }
-                else if(counter == 1){
-                    document.getElementById("imgClickAndChange").src = "photos/chihuahua_jacket.jpg";
-                    counter--;
-                }
-                else if(counter == 2){
-                    document.getElementById("imgClickAndChange").src = "photos/professional_shiba.jpg";
-                    counter--;
-                }
-            };
-            
-        </script>
+        document.getElementById('nextImg').onclick = function(){
+            counter++;
+            if(counter > imgList.length-1){
+                counter = 0;
+            }
+            document.getElementById("imgClickAndChange").src = imgList[counter];
+        }
+        document.getElementById('prevImg').onclick = function() {
+            counter--;
+            if(counter < 0){
+                counter = imgList.length-1;
+            }
+            document.getElementById("imgClickAndChange").src = imgList[counter];
+        }
+    </script>
     </body>
 </html>

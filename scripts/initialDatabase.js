@@ -3,36 +3,47 @@
 var user_array = []; 
 
 // Function to check username does not already exist
-function database_check(user){
-    return (!user_array.includes(user))
-}    
+
+function append_account(user,uname,pw){
+	var j;
+	while(j < user_array.length)  {
+		if (uname == user_array[j].username){
+			var new_name  = window.prompt('Username already in use.','username');
+			uname = new_name;
+			j = 0;
+		}
+		j += 1;
+	}
+
+	user.username = uname;
+	user.password = pw;
+	user.member_level = 1;
+	user_array.push(user);
+	console.log(user_array);
+	return
+
+};
 
 // Class containing User information, initialized as guest
 class user_pass_data { 
-	constructor(){
-		this.username= "Guest",
-		this.password= "password",
-		this.member_level= 0;
+	constructor(username = 'Guest', password = 'password',member_level = 0){
+		this.username= username,
+		this.password= password,
+		this.member_level= member_level;
 	}
-
-	create_account(user,password) {
-		if(database_check(user)){
-             this.username = user;
-             this.password = password;
-             this.member_level = 1;
-             
-            
-             return (true)
-         }
-     }
 };
 
 // Create Accounts and populate array
-var user = new user_pass_data;
+var group_accounts = ['Tyson','SoccerRules','alyssalovespuppies','alyssa','audrey','potato','nick','A','terry','deep-fried','grey','withane','puppyhater6969','daniel','garrett','FUCKJAVASCRIPT'];
+var i;
 
-if(user.create_account('Tyson','SoccerRules')){
-	user_array.push(user)
-} else{
-	console.log("Username already in use. Select a unique one")
+for (i=0; i < group_accounts.length; i ++) {
+	if (i % 2 == 0){
+		var user = new user_pass_data;
+	append_account(user,group_accounts[i],group_accounts[i+1]);
+	}
 }
-console.log(user_array)
+var user = new user_pass_data;
+append_account(user,'Tyson','cool');
+
+

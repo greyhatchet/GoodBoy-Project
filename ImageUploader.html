@@ -10,7 +10,9 @@
 <body>  
     <img id="temp" alt="your image" height="400" />
     <form action=""> 
-        <input type="file" name="pic" accept="image/*" onchange="document.getElementById('temp').src = window.URL.createObjectURL(this.files[0])" style="text-align:center;">
+        <input type="file" name="pic" accept="image/*" 
+        onchange="document.getElementById('temp').src = window.URL.createObjectURL(this.files[0])" 
+        style="text-align:center;">
         <input type="submit">
     </form><br/>
     <footer>

@@ -7,57 +7,43 @@
     href = "./public.css" media = "all" />
 </head>
 <body>
-    <script src="imgcopier.js"></script> 
+    <script>
+        
+        var new_img_path;
+        var img_name = 'image001.jpg';
+        var img_num;
+        var guest_img_dir;
+        console.log(guest_img_dir);
+        var all_img_dir;
+        console.log(all_img_dir);
+        
+    </script>
+    
     <img id="blah" alt="your image" width="1000" />
     <input style="margin: 5px;" type="file" 
-        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0]);
-                  img_path = window.URL.createObjectURL(this.files[0]);" style="text-align:center;">
+        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0]);" style="text-align:center;">
     <footer> 
-    <script src="imgcopier.js"></script>  
-    <button onclick= "copyFile2">Submit</button>
+    <button id="submit" onclick="copyFile()">Submit</button>
     <button onclick="location.href = './website.html'">Back</button> 
     <button onclick="location.href = './website_outline.html'">Sign Out</button>
     </footer>
-    <script>
-        
-    var img_path = './image001.jpg';
-    var img_num; 
-    var guest_img_dir = './guest_images';
-        
-    function copyFile2() {
-        
-        alert('FUCK');
-        copyFile();
-        
-    }
-    
-   /* 
-    //Include fs and path modules
-    var fs = require('fs');
-    var path = require('path');
-        
-    var img_path;
-    var guest_img_dir = path.join('./', 'guest_images');
-    var all_img_dir = path.join('./', 'all_images');
-        
-    //copy the $file to $dir2
-    function copyFile(file_path, dir2) {
-        
-        var img_path = file_path;
-        
-        //gets file name and adds it to dir2
-        //var f = path.basename(file);
-        var source = fs.createReadStream(img_path);
-        var dest = fs.createWriteStream(path.resolve(dir2, img_path));
+       
+    <script type="text/javascript">
 
-        source.pipe(dest);
-        source.on('end', function() { console.log('Succesfully copied'); });
-        source.on('error', function(err) { console.log(err); });
+    var myLink = document.getElementById("submit");
+
+    myLink.onclick = function(){
         
-    };
-        
-    copyFile('./image001.jpg', './guest_images');
-    */    
-    </script>
+        new_img_name = img_name;
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "./imgcopierbundle3.js"; 
+        document.getElementsByTagName("body")[0].appendChild(script);
+        return false;
+
+    }
+
+
+</script>
 </body>  
 </html>

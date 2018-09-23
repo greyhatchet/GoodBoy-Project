@@ -11,7 +11,7 @@
     <button onclick="location.href = './GoodBois_Login.html'" id="login">Login</button>
     <img />    
     <p>Click next to see more good bois!</p>
-    <img src="bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
+    <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
     <input type="button" value="Previous" id="prevImg" onclick="changeImage()">
     <input type="button" value="Next" id="nextImg" onclick="changeImage()">
     
@@ -20,30 +20,30 @@
 
         nextImg.onclick = function(){
             if(counter == 0){
-                document.getElementById("imgClickAndChange").src = "bib_pom.jpg";
+                document.getElementById("imgClickAndChange").src = "photos/bib_pom.jpg";
                 counter++;
             }
             else if(counter == 1){
-                document.getElementById("imgClickAndChange").src = "chihuahua_jacket.jpg";
+                document.getElementById("imgClickAndChange").src = "photos/chihuahua_jacket.jpg";
                 counter++;
             }
             else if(counter == 2){
-                document.getElementById("imgClickAndChange").src = "professional_shiba.jpg";
+                document.getElementById("imgClickAndChange").src = "photos/professional_shiba.jpg";
                 counter = 0;
             }
         };
         
         prevImg.onclick = function(){
             if(counter == 0){
-                document.getElementById("imgClickAndChange").src = "bib_pom.jpg";
+                document.getElementById("imgClickAndChange").src = "photos/bib_pom.jpg";
                 counter = 2;
             }
             else if(counter == 1){
-                document.getElementById("imgClickAndChange").src = "chihuahua_jacket.jpg";
+                document.getElementById("imgClickAndChange").src = "photos/chihuahua_jacket.jpg";
                 counter--;
             }
             else if(counter == 2){
-                document.getElementById("imgClickAndChange").src = "professional_shiba.jpg";
+                document.getElementById("imgClickAndChange").src = "photos/professional_shiba.jpg";
                 counter--;
             }
         };

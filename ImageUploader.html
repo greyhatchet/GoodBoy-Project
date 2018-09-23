@@ -5,14 +5,17 @@
     href = "./public.css" media = "all" />
     <link rel="shortcut icon" href="thumbnail.png" />
     <title>Photo Uploader</title>
+    <h2>Upload an Image</h2>
 </head>
 <body>  
-    <img id="blah" alt="your image" width="1000" />
-    <input style="margin: 5px;" type="file" 
-        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])" style="text-align:center;">
+    <img id="temp" alt="your image" height="400" />
+    <form action=""> 
+        <input type="file" name="pic" accept="image/*" onchange="document.getElementById('temp').src = window.URL.createObjectURL(this.files[0])" style="text-align:center;">
+        <input type="submit">
+    </form><br/>
     <footer>
     <button onclick="location.href = './website.html'">Back</button> 
     <button onclick="location.href = './website_outline.html'">Sign Out</button>
-    </footer
+    </footer>
 </body>  
 </html>

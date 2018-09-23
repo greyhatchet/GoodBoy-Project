@@ -18,10 +18,23 @@
                 <label for="username">Username:</label><br>
                 <input type="text" id="username"><br>
                 <label for="password">Password:</label><br>
-                <input type="text" id="password"><br>
+                <input type="password" value="" id="myInput"><br>
+                <input type="checkbox" onclick="myFunction()">Show Password<br>
                 <input type="submit" value="Login" onclick="loginChecker();">
                 <input type="submit" value="Signup"><br/>
                 <input type="submit" value="Premium">
+        
+
+<script>
+function myFunction() {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+        x.type = "text";
+    } else {
+        x.type = "password";
+    }
+}
+</script>
             </form><br/>
             <button onclick="location.href = './website_outline.html'">Continue as Guest</button>
             

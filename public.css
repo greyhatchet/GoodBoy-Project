@@ -12,14 +12,23 @@
 * {
     text-align: center;
 }
-
-html {
+html,body {
     margin: 10px;
     border: none;
     padding: 10px;
+    line-height: 26px;
+    background-color: blanchedalmond;
+    color: #0d2c40;
 }
-body {
-    margin: 10px;
-    padding: 2px;
+.button {
+    border-radius: 2px;
+    background-color: gray;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+.button:hover {
+    background-color: gray;
+    color: white;
 }
 

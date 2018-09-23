@@ -3,22 +3,51 @@
     <head>
     <link rel = "stylesheet" title = "basic style" type = "text/css"
     href = "./public.css" media = "all" />
+    <link rel="shortcut icon" href="thumbnail.png" />
     <title>Good Bois</title>
     </head>
     <body>
-        <p><h2>Welcome to Good Bois!</h2></p>
-        <button onclick="location.href = './GoodBois_Login.html'" id="login">Login</button>
-        <img />
+    <p><h2>Welcome to Good Bois!</h2></p>
+    <button onclick="location.href = './GoodBois_Login.html'" id="login">Login</button><br/>
+    <img />    
+    <p>Click next to see more good bois!</p>
+    <img src="bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
+    <input type="button" value="Previous" id="prevImg" onclick="changeImage()">
+    <input type="button" value="Next" id="nextImg" onclick="changeImage()">
+    
+    <script>
+        var counter = 1;
+
+        nextImg.onclick = function(){
+            if(counter == 0){
+                document.getElementById("imgClickAndChange").src = "bib_pom.jpg";
+                counter++;
+            }
+            else if(counter == 1){
+                document.getElementById("imgClickAndChange").src = "chihuahua_jacket.jpg";
+                counter++;
+            }
+            else if(counter == 2){
+                document.getElementById("imgClickAndChange").src = "professional_shiba.jpg";
+                counter = 0;
+            }
+        };
         
-        <p>One image at a time, click next/previous</p>
-        <div class="pic-container">
-                <img src="images/A.png" style="width:80%"/>
-        </div>
-        <p>At bottom of page, page numbers and next page button.</p>
-        <footer>
-            <a href="#" class="previous round">&#10094; Prev</a>
-            <a href="#" class="next round">Next &#10095;</a>
-        </footer>
+        prevImg.onclick = function(){
+            if(counter == 0){
+                document.getElementById("imgClickAndChange").src = "bib_pom.jpg";
+                counter = 2;
+            }
+            else if(counter == 1){
+                document.getElementById("imgClickAndChange").src = "chihuahua_jacket.jpg";
+                counter--;
+            }
+            else if(counter == 2){
+                document.getElementById("imgClickAndChange").src = "professional_shiba.jpg";
+                counter--;
+            }
+        };
         
+    </script>
     </body>
 </html>

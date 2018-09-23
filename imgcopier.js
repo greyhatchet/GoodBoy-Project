@@ -1,5 +1,5 @@
 //copy the $file to $dir2
-function copyFile = (file, dir2) => {
+function copyFile (file, dir2) {
   //include the fs, path modules
   var fs = require('fs');
   var path = require('path');

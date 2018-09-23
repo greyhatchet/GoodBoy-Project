@@ -7,29 +7,69 @@
     href = "./public.css" media = "all" />
         <link rel="shortcut icon" href="thumbnail.png" />
         <title>Good Bois</title>
+        <img src="photos/SickDoge.gif" class="ribbon"/>
         <h1>Good Bois</h1>
+        <style>
+body { background-image: url("photos/HellaCuteDog.jpg");
+width: 1400px;
+height: 640px; 
+border: 9px solid black; }
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 11px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {margin: 2px 1px; font-size: 10px; background-color: #e7e7e7; color: black;}
+.ribbon {
+   position: relative;
+   top: 40px;
+   right: -0px;
+   width: 150px;
+   height: 150px;
+}
+
+
+
+</style>
+
     </head>
     <body>
-        <p>This is where you'll see good bois</p>
-        <h2>Login</h2>
+
+        <p><b> The Net's best dogs, for the Net's best members </b> </p>
+        
+        <h1>
+        Login</h1>
             <form method="post">
+
                 <script src="scripts/initialDatabase.js"></script>
                 <script src="scripts/loginChecker.js"></script>
-                <label for="username">Username:</label><br>
+                <script src="scripts/signUp.js"></script>
+                <script src="scripts/premiumSignUp.js"></script>
+                <label for="username"><b>Username:</b></label><br>
                 <input type="text" id="username"><br>
-                <label for="password">Password:</label><br>
-                <input type="password" value="" id="myInput"><br>
+                <label for="password"><b>Password:</b></label><br>
+                <input type="password" value="" id="password"><br>
                 <input type="checkbox" onclick="myFunction()">Show Password<br>
-                <input type="submit" value="Login" onclick="loginChecker();">
-                <button onclick="location.href = './website_outline.html'">Continue as Guest</button>
-                </form><br/>
-                <input type="submit" value="Create Account">
-                <input type="submit" value="Create PREMIUM Account">
-        
+                <button onclick="loginChecker();" class="button" >Login </button>
+                <button onclick="premiumSignUp();" class="button"> Create PREMIUM Account</button>
+
+                <br/>
+                <button onclick="signUp();" class="button button2">Create Account </button>
+                <br/>
+                <a href='./website_outline.html'>Continue as Guest</a>
 
 <script>
 function myFunction() {
-    var x = document.getElementById("myInput");
+    var x = document.getElementById("password");
     if (x.type === "password") {
         x.type = "text";
     } else {

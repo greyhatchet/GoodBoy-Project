@@ -4,16 +4,41 @@
     <link rel = "stylesheet" title = "basic style" type = "text/css"
     href = "./public.css" media = "all" />
     <link rel="shortcut icon" href="thumbnail.png" />
+    <style>
+    .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 11px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button2{background-color: #FF1493; color: black; font-size: 12px; margin: 1px 1px; 
+}
+
+        .ribbon {
+   position: relative;
+   top: 30px;
+   right: -0px;
+   width: 150px;
+   height: 150px;
+}
+    </style>
     <title>Good Bois</title>
     </head>
     <body>
-    <p><h2>Welcome to Good Bois!</h2></p>
-    <button onclick="location.href = './GoodBois_Login.html'" id="login">Login</button>
+     <img src="photos/SickDoge.gif" class="ribbon"/>
+    <h2>Welcome to Good Bois! <br> GUEST USER</h2>
+    <button class= "button" onclick="location.href = './GoodBois_Login.html'" id="login">Login or Create an Account for Full Access!</button>
     <img />    
-    <p>Click next to see more good bois!</p>
+    <br>
     <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
-    <input type="button" value="Previous" id="prevImg" onclick="changeImage()">
-    <input type="button" value="Next" id="nextImg" onclick="changeImage()">
+    <button class="button button2" id="prevImg" onclick="changeImage()">"Previous" </button>
+    <button class="button button2" id="nextImg" onclick="changeImage()">"Next" </button>
     
     <script>
         var counter = 1;

@@ -11,7 +11,7 @@ function loginChecker() {
 				//alert('Great job hon')
 				//window.location.pathname='C:/Users/Audrey/Documents/GitHub/7P1A/website.html'
 				if (user_array[z].member_level == 1) {
-				redirectTo('./website.html');
+				redirectTo('./website.html');//redirect to the correct access level
 				}
 				else {
 					redirectTo('./premium_website.html');
@@ -19,7 +19,7 @@ function loginChecker() {
 			}
 		}
 	}
-	alert('Incorrect Username or Password')
+	alert('Incorrect Username or Password')//If the combination is incorrect alert with error message
 }
 
 function redirectTo(filename) {

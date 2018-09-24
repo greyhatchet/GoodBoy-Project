@@ -32,31 +32,107 @@
         <h2>&hearts;Welcome, you very good boy&hearts;</h2>
     </head>
     <body>
+        <script type="text/javascript">
+        
+        var counter
+        var file_extension
+        
+        window.addEventListener('error', function(err) {
+            throw err;
+        }, true);
+        
+        function UrlExists(url)
+        {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            return http.status!=404;
+        }
+        
+        function generateURL(){
+            
+            return "photos/image00" + counter + file_extension            
+            
+        }
+        
+        </script>
         <button class= "button button2" onclick="location.href = './ImageUploader.html';" id="picbutton">Upload Photo</button>
         <button class= "button button2" onclick="location.href = 'GoodBois_Login.html'">Sign Out</button>
             <br>
             <br>
-        <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
+        <img src="photos/image000.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
         <button class="button button2" id="prevImg" onclick="changeImage()">Previous </button>
         <button class="button button2" id="nextImg" onclick="changeImage()">Next</button>
         
         <script>
+            
         var counter = 0
-        var imgList = ["photos/chihuahua_jacket.jpg","photos/footballdog.jpg","photos/HellaCuteDog.jpg","photos/professional_shiba.jpg"] //list of images
+        var file_extension = ".jpg"
 
-        document.getElementById('nextImg').onclick = function(){
+        document.getElementById("nextImg").onclick = function(){
+            
             counter++;
-            if(counter > imgList.length-1){
-                counter = 0;
+            file_extension = ".jpg";
+            img_string = generateURL();
+            
+            if (UrlExists(img_string)){
+                
+                document.getElementById("imgClickAndChange").src = img_string      
+                
             }
-            document.getElementById("imgClickAndChange").src = imgList[counter];
+            else {
+                
+                file_extension = ".png";
+                img_string = generateURL();
+                if (UrlExists(img_string)){
+                    
+                    document.getElementById("imgClickAndChange").src = img_string
+                    
+                }
+                else {
+                    
+                    counter--;
+                    file_extension = ".jpg";
+                    img_string = generateURL();
+                    alert("Last image reached!");
+                    
+                }
+                
+            
+            }
+  
         }
-        document.getElementById('prevImg').onclick = function() {
+        document.getElementById("prevImg").onclick = function() {
+            
             counter--;
-            if(counter < 0){
-                counter = imgList.length-1;
+            file_extension = ".jpg";
+            img_string = generateURL();            
+            
+            if( UrlExists(img_string)){
+                
+                document.getElementById("imgClickAndChange").src = img_string      
+                
             }
-            document.getElementById("imgClickAndChange").src = imgList[counter];
+            else {
+                
+                file_extension = ".png";
+                img_string = generateURL();
+                if (UrlExists(img_string)){
+                    
+                    document.getElementById("imgClickAndChange").src = img_string
+                    
+                }
+                else {
+                    
+                    counter++;
+                    img_string = generateURL();
+                    file_extension = ".jpg";
+                    alert("First image reached!");
+                    
+                }
+                
+            
+            }
         }
     </script>
     </body>

@@ -31,48 +31,109 @@
     <title>Good Bois</title>
     </head>
     <body>
-     <img src="photos/SickDoge.gif" class="ribbon"/>
+    <script type="text/javascript">
+        
+        var counter
+        var file_extension
+        
+        window.addEventListener('error', function(err) {
+            throw err;
+        }, true);
+        
+        function UrlExists(url)
+        {
+            var http = new XMLHttpRequest();
+            http.open('HEAD', url, false);
+            http.send();
+            return http.status!=404;
+        }
+        
+        function generateURL(){
+            
+            return "photos/image00" + counter + file_extension            
+            
+        }
+        
+    </script>
+    <img src="photos/SickDoge.gif" class="ribbon"/>
     <h2>Welcome to Good Bois! <br> GUEST USER</h2>
     <button class= "button" onclick="location.href = './GoodBois_Login.html'" id="login">Login or Create an Account for Full Access!</button>
     <img />    
     <br>
-    <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
-    <button class="button button2" id="prevImg" onclick="changeImage()">Previous </button>
-    <button class="button button2" id="nextImg" onclick="changeImage()">Next </button>
+    <img src="photos/image000.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
+    <button class="button button2" id="prevImg">Previous </button>
+    <button class="button button2" id="nextImg">Next </button>
     
     <script>
-        var counter = 1;
+        
+        var counter = 0
+        var file_extension = ".jpg"
 
-        nextImg.onclick = function(){
-            if(counter == 0){
-                document.getElementById("imgClickAndChange").src = "photos/bib_pom.jpg";
-                counter++;
+        document.getElementById("nextImg").onclick = function(){
+            
+            counter++;
+            file_extension = ".jpg";
+            img_string = generateURL();
+            
+            if (UrlExists(img_string)){
+                
+                document.getElementById("imgClickAndChange").src = img_string      
+                
             }
-            else if(counter == 1){
-                document.getElementById("imgClickAndChange").src = "photos/chihuahua_jacket.jpg";
-                counter++;
+            else {
+                
+                file_extension = ".png";
+                img_string = generateURL();
+                if (UrlExists(img_string)){
+                    
+                    document.getElementById("imgClickAndChange").src = img_string
+                    
+                }
+                else {
+                    
+                    counter--;
+                    file_extension = ".jpg";
+                    img_string = generateURL();
+                    alert("Last image reached!");
+                    
+                }
+                
+            
             }
-            else if(counter == 2){
-                document.getElementById("imgClickAndChange").src = "photos/professional_shiba.jpg";
-                counter = 0;
+  
+        }
+        document.getElementById("prevImg").onclick = function() {
+            
+            counter--;
+            file_extension = ".jpg";
+            img_string = generateURL();            
+            
+            if( UrlExists(img_string)){
+                
+                document.getElementById("imgClickAndChange").src = img_string      
+                
             }
-        };
-        
-        prevImg.onclick = function(){
-            if(counter == 0){
-                document.getElementById("imgClickAndChange").src = "photos/bib_pom.jpg";
-                counter = 2;
+            else {
+                
+                file_extension = ".png";
+                img_string = generateURL();
+                if (UrlExists(img_string)){
+                    
+                    document.getElementById("imgClickAndChange").src = img_string
+                    
+                }
+                else {
+                    
+                    counter++;
+                    img_string = generateURL();
+                    file_extension = ".jpg";
+                    alert("First image reached!");
+                    
+                }
+                
+            
             }
-            else if(counter == 1){
-                document.getElementById("imgClickAndChange").src = "photos/chihuahua_jacket.jpg";
-                counter--;
-            }
-            else if(counter == 2){
-                document.getElementById("imgClickAndChange").src = "photos/professional_shiba.jpg";
-                counter--;
-            }
-        };
-        
+        }
     </script>
     </body>
 </html>

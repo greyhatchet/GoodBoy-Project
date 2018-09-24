@@ -10,11 +10,16 @@ function loginChecker() {
 			if(user_array[z].password == login_password){
 				//alert('Great job hon')
 				//window.location.pathname='C:/Users/Audrey/Documents/GitHub/7P1A/website.html'
-				redirectTo('./website.html')
+				if (user_array[z].member_level == 1) {
+				redirectTo('./website.html');
+				}
+				else {
+					redirectTo('./premium_website.html');
+				}
 			}
 		}
 	}
-	return false
+	alert('Incorrect Username or Password')
 }
 
 function redirectTo(filename) {

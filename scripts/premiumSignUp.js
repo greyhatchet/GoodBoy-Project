@@ -3,7 +3,11 @@
 function premiumSignUp() {
 	var new_user = document.getElementById('username').value;
 	var new_password = document.getElementById('password').value;
-	var user = new user_pass_data (new_user,new_password,2);
-	user_array.push(user);
-	redirectTo('./premium_website.html')
-}
+	if (new_user != "" && new_password != "") {
+		var user = new user_pass_data (new_user,new_password,2);
+		user_array.push(user);
+		redirectTo('./premium_website.html')
+	}
+
+	alert('Invalid sign in!')
+	};	

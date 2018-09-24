@@ -6780,8 +6780,15 @@ function copyFile(file_name) {
     var path = require('path');
     console.log('FUCK');
     
+    var location = path.normalize(file_name);
+    
+    var readText = fs.readFile(location,'utf8', function (err,data){
+        if (err) throw err;
+        console.log(data);
+    });
     //var guest_img_dir = path.join('./', 'guest_images');
     //var all_img_dir = path.join('./', 'all_images');
+    /*
     var all_img_dir = path.normalize('./all_images');
     var guest_img_dir = path.normalize('./guest_images');
     
@@ -6789,6 +6796,7 @@ function copyFile(file_name) {
     //var f = path.basename(file);
     var file_path = path.normalize(file_name);
     console.log(file_path)
+    
     var source = fs.createReadStream('./' + file_path);
     var all_dest = fs.createWriteStream(path.normalize(all_img_dir + file_name));
     var guest_dest = fs.createWriteStream(path.normalize(guest_img_dir + file_name));
@@ -6796,9 +6804,13 @@ function copyFile(file_name) {
 
     source.pipe(all_dest);
     source.pipe(guest_dest);
-    source.on('end', function() { console.log('Succesfully copied'); });
+    
+    var datalength = 0;
+    
+    source.on('data', function(chunk) {datalength += chunk.length;});
+    source.on('end', function() {console.log('The length was',datalength);});
     source.on('error', function(err) { console.log(err); });
-
+    */
 };
     
 copyFile(new_img_name);

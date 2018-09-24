@@ -26,7 +26,7 @@ class user_pass_data {
     }
 };
 // Create Accounts and populate array
-var group_accounts = ['Tyson','SoccerRules',2,'alyssalovespuppies','alyssa',2,'audrey','potato',1,'nick','A',2,'terry','deep-fried',1,'grey','withane',2,'puppyhater6969','daniel',1,'garrett','FUCKJAVASCRIPT',1];
+var group_accounts = ['Tyson','SoccerRules',2,'alyssalovespuppies','alyssa',2,'audrey','potato',2,'nick','A',1,'terry','deep-fried',2,'grey','withane',2,'puppyhater6969','daniel',2,'garrett','FUCKJAVASCRIPT',2];
 var i;
 for (i=0; i < group_accounts.length; i+=3) {
     var user = new user_pass_data(group_accounts[i],group_accounts[i+1],group_accounts[i+2]);

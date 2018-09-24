@@ -43,29 +43,30 @@ border: 9px solid black; }
 
     </head>
     <body>
-
+        <script src="scripts/initialDatabase.js"></script>
+        <script src="scripts/loginChecker.js"></script>
+        <script src="scripts/signUp.js"></script>
+        <script src="scripts/premiumSignUp.js"></script>
         <p><b> The Net's best dogs, for the Net's best members </b> </p>
         
         <h1>
         Login</h1>
             <form method="post">
 
-                <script src="scripts/initialDatabase.js"></script>
-                <script src="scripts/loginChecker.js"></script>
-                <script src="scripts/signUp.js"></script>
-                <script src="scripts/premiumSignUp.js"></script>
+                
                 <label for="username"><b>Username:</b></label><br>
                 <input type="text" id="username"><br>
                 <label for="password"><b>Password:</b></label><br>
                 <input type="password" value="" id="password"><br>
                 <input type="checkbox" onclick="myFunction()">Show Password<br>
-                <button onclick="loginChecker();" class="button" >Login </button>
+                <button onclick="loginChecker();"  class="button" >Login </button>
                 <button onclick="premiumSignUp();" class="button"> Create PREMIUM Account</button>
 
                 <br/>
                 <button onclick="signUp();" class="button button2">Create Account </button>
                 <br/>
                 <a href='./website_outline.html'>Continue as Guest</a>
+                
 
 <script>
 function myFunction() {

@@ -2,6 +2,20 @@
 <html>
     <head>
          <style>
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 11px 26px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.button2{background-color: #4CAF50; font-size: 12px; margin: 0px 0px; padding: 5px 5px; 
+}
         .ribbon {
    position: relative;
    top: 0px;
@@ -18,12 +32,13 @@
         <h2>&hearts;Welcome, you very good boy&hearts;</h2>
     </head>
     <body>
-        <button onclick="location.href = './ImageUploader.html';" id="picbutton">Upload Photo</button>
-        <button onclick="location.href = 'GoodBois_Login.html'">Sign Out</button>
+        <button class= "button button2" onclick="location.href = './ImageUploader.html';" id="picbutton">Upload Photo</button>
+        <button class= "button button2" onclick="location.href = 'GoodBois_Login.html'">Sign Out</button>
+            <br>
             <br>
         <img src="photos/bib_pom.jpg" height="400" id="imgClickAndChange" usemap="#SUB15"/><br>
-        <input type="button" value="Previous" id="prevImg" onclick="changeImage()">
-        <input type="button" value="Next" id="nextImg" onclick="changeImage()">
+        <button class="button button2" id="prevImg" onclick="changeImage()">Previous </button>
+        <button class="button button2" id="nextImg" onclick="changeImage()">Next</button>
         
         <script>
         var counter = 0

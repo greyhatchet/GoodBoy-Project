@@ -5,5 +5,6 @@ function signUp() {
 	var new_password = document.getElementById('password').value;
 	var user = new user_pass_data (new_user,new_password,1);
 	user_array.push(user);
-	window.location.assign("website_outline.html");
+	alert();
+	window.top.location"./website.html";
 }

@@ -18,18 +18,15 @@
         console.log(all_img_dir);
         
     </script>
-<<<<<<< HEAD
     <img src="photos/SickDoge.gif" class="ribbon"/>
     <br>
-    <img id="blah" alt="Show us your boys!" width="1000" />
-=======
-    
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="files[]" multiple>
+        <input type="submit" value="Upload File" name="submit">
+    </form>
 
->>>>>>> 406fc761795344b5d16f422171c15741ef5864b8
-    <input style="margin: 5px;" type="file" 
-        onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0]);" style="text-align:center;">
-    <footer> 
-    <button id="submit" onclick="copyFile()">Submit</button>
+	<script src="upload.js"></script>
+
     <button onclick="location.href = './website.html'">Back</button> 
     <button onclick="location.href = './website_outline.html'">Sign Out</button>
     </footer>

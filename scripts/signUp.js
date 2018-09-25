@@ -8,5 +8,7 @@ function signUp() {
 	user_array.push(user);
 	redirectTo('./website.html')
 	}
+	else {
 	alert('Invalid Sign in!')
+	}
 }

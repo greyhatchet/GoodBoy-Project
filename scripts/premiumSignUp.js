@@ -8,6 +8,7 @@ function premiumSignUp() {
 		user_array.push(user);
 		redirectTo('./premium_website.html')
 	}
-
-	alert('Invalid sign in!')
+	else {
+		alert('Invalid sign in!')
+	}
 	};	

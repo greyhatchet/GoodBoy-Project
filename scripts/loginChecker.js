@@ -9,7 +9,7 @@ function loginChecker() {
 		if (user_array[z].username == login_user){
 			if(user_array[z].password == login_password){
 				if (user_array[z].member_level == 1) {
-				redirectTo('./website.html');
+				redirectTo('./website.html');//redirect to the correct access level
 				}
 				else {
 					redirectTo('./premium_website.html');
@@ -17,7 +17,7 @@ function loginChecker() {
 			}
 		}
 	}
-	alert('Incorrect Username or Password')
+	alert('Incorrect Username or Password')//If the combination is incorrect alert with error message
 }
 
 function redirectTo(filename) {

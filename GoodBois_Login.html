@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+    <head> <!--Aesthetics-->
         <meta charset="UTF-8">
         <link rel = "stylesheet" title = "basic style" type = "text/css"
     href = "./public.css" media = "all" />
@@ -42,7 +42,7 @@ border: 9px solid black; }
 </style>
 
     </head>
-    <body>
+    <body><!--Scripts for all JavaScript files-->
         <script src="./initialDatabase.js"></script>
         <script src="./loginChecker.js"></script>
         <script src="./signUp.js"></script>
@@ -51,22 +51,23 @@ border: 9px solid black; }
         
         <h1>
         Login</h1>
-            <form method="post">
-
+            <form method="post"><!--Form for login input-->  
                 
                 <label for="username"><b>Username:</b></label><br>
                 <input type="text" id="username"><br>
+                <!--Password Input-->
                 <label for="password"><b>Password:</b></label><br>
                 <input type="password" value="" id="password"><br>
+                <!--Hide preview of password-->
                 <input type="checkbox" onclick="myFunction()">Show Password<br>
-                <button onclick="loginChecker();" class="button">Login </button>
+                <button onclick="loginChecker();" class="button">Login </button> <!--Call loginChecker() on login-->
                 <a id='redirect' style='display:none;'></a>
                 <button onclick="premiumSignUp();" class="button">Create PREMIUM Account</button>
 
                 <br/>
-                <button onclick="signUp();" class="button button2">Create Account </button>
+                <button onclick="signUp();" class="button button2">Create Account </button><!--Creates a new account-->
                 <br/>
-                <a href='./website_outline.html'>Continue as Guest</a>
+                <a href='./website_outline.html'>Continue as Guest</a><!--continue as guest-->
                 
 
 <script>

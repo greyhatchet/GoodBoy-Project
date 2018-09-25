@@ -18,35 +18,25 @@
         console.log(all_img_dir);
         
     </script>
+
     <img src="photos/SickDoge.gif" class="ribbon"/>
     <br>
+    <img id="blah" alt="Show us your boys!" width="1000" />
     <form method="post" enctype="multipart/form-data">
         <input type="file" name="files[]" multiple>
         <input type="submit" value="Upload File" name="submit">
     </form>
-
+    <!--<script> 
+        var myLink = document.getElementById("imageform");
+        myLink.onsubmit = function(){
+            var script = document.createElement('script');
+            script.src = 'upload.js';
+            document.getElementsByTagName('body').appendChild(script);
+        } 
+    </script>-->
 	<script src="upload.js"></script>
 
     <button onclick="location.href = './website.html'">Back</button> 
     <button onclick="location.href = './website_outline.html'">Sign Out</button>
-    </footer>
-       
-    <script type="text/javascript">
-
-    var myLink = document.getElementById("submit");
-
-    myLink.onclick = function(){
-        
-        new_img_name = img_name;
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = "./imgcopierbundle3.js"; 
-        document.getElementsByTagName("body")[0].appendChild(script);
-        return false;
-
-    }
-
-
-</script>
 </body>  
 </html>

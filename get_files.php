@@ -1,6 +1,6 @@
 <?php 
 
-    $dir = '/u/awang/public_html/dogs/photos';
+    $dir = 'photos/';
     $files = scandir($dir);
     echo '<pre>'; print_r($files); echo '</pre>';
     

@@ -6,7 +6,6 @@ function signUp() {
 	if (new_user != "" && new_password != "") {
 		var user = new user_pass_data (new_user,new_password,1);
 	user_array.push(user);
-	window.location.assign("website.html");
 	redirectTo('./website.html')
 	}
 	alert('Invalid Sign in!')

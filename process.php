@@ -1,11 +1,11 @@
 <?php 
-echo 'hella';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo '1';
     if (isset($_FILES['files'])) {
         echo '2';
         $errors = [];
-        $path = '/u/awang/public_html/dogs/photos';
+        $path = 'photos/';
         $extensions = ['jpg', 'jpeg', 'png', 'gif'];
 
         $all_files = count($_FILES['files']['tmp_name']);
